@@ -86,6 +86,14 @@ object TaskRepository {
         return removed
     }
 
+    fun update(id: Int, newTitle: String): Task? {
+        val task = tasks.find { it.id == id } ?: return null
+        task.title = newTitle
+        persist()
+    return task
+    }
+
+
     // TODO: Week 7 Lab 1 Activity 2 Step 6
     // Add find() and update() methods here
     // Follow instructions in mdbook to implement:

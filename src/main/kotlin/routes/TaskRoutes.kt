@@ -121,6 +121,8 @@ fun Route.taskRoutes() {
         call.respond(HttpStatusCode.SeeOther)
     }
 
+
+    
     /**
      * POST /tasks/{id}/delete - Delete task
      * Dual-mode: HTMX empty response or PRG redirect
